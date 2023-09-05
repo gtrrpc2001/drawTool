@@ -1,0 +1,201 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+vbDrawTool
+</name>
+</assembly>
+<members>
+<member name="T:vbDrawTool.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:vbDrawTool.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:vbDrawTool.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="T:vbDrawTool.ObserverClass">
+ <summary>
+ 옵저버에게 통보를 할 때 매개변수로 사용되는 클래스.
+ 본 클래스의 목적은 ObserverName 에  따라서 처리 할지 말지를 구분하기 위해서 사용된다.
+ 예를 들어 MainView 에서 Next 가 실행 될 때, ObserverName 이 ToolBar 일 때만 ObserverAction 을 실행한다.
+ </summary>
+</member>
+<member name="M:vbDrawTool.DrawObject.Clone">
+ <summary>
+ DrawObject 복사 함수
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:vbDrawTool.DrawObject.Draw(System.Drawing.Graphics)">
+ <summary>
+ DrawObject 그리기 함수
+ </summary>
+ <param name="g"></param>
+</member>
+<member name="M:vbDrawTool.DrawObject.GetHandle(System.Int32)">
+ <summary>
+ 핸들 넘버의 위치를 반환한다.
+ </summary>
+ <param name="handleNumber"></param>
+ <returns></returns>
+</member>
+<member name="M:vbDrawTool.DrawObject.GetHandleRectangle(System.Int32)">
+ <summary>
+ 핸들의 Rectangle 을 반환한다.
+ </summary>
+ <param name="handleNumber"></param>
+ <returns></returns>
+</member>
+<member name="M:vbDrawTool.DrawObject.DrawPointer(System.Drawing.Graphics)">
+ <summary>
+ DrawObject 가 선택되었을때 표시를 해주는 Pointer 를 그린다
+ </summary>
+ <param name="g"></param>
+</member>
+<member name="M:vbDrawTool.DrawObject.HitTest(System.Drawing.Point)">
+ <summary>
+ 마우스가 클릭된 위치가 DrawObject를 포함하는지 알려준다
+ -1 - no hit
+  0 - hit anywhere
+  1 - handle number
+  </summary>
+ <param name="point"></param>
+ <returns></returns>
+</member>
+<member name="M:vbDrawTool.DrawObject.PointInObject(System.Drawing.Point)">
+ <summary>
+ 마우스의 위치가 DrawObject 내에 있는지 알려준다.
+ </summary>
+ <param name="point"></param>
+ <returns></returns>
+</member>
+<member name="M:vbDrawTool.DrawObject.GetHandleCursor(System.Int32)">
+ <summary>
+ Pointer 의 HandleNumber 에 따라서 마우스 커서를 반환한다.
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:vbDrawTool.DrawObject.IntersectsWith(System.Drawing.Rectangle)">
+ <summary>
+ DrawObject가 rectangle 에 포함되는지 알려준다.
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:vbDrawTool.DrawObject.Move(System.Int32,System.Int32)">
+ <summary>
+ DrawObject 의 위치를 이동한다.
+ </summary>
+ <param name="deltaX"></param>
+ <param name="deltaY"></param>
+</member>
+<member name="M:vbDrawTool.DrawObject.MoveHandleTo(System.Drawing.Point,System.Int32)">
+ <summary>
+ DrawObject 의 사이즈를 변경한다.
+ </summary>
+ <param name="point"></param>
+ <param name="handleNumber"></param>
+</member>
+<member name="M:vbDrawTool.DrawObject.Normalize">
+ <summary>
+ DrawObject 를 새로 그리거나, 사이즈를 변경이 끝났을 때 호출된다.
+ </summary>
+</member>
+<member name="M:vbDrawTool.DrawObject.Initialize">
+ <summary>
+ DrawObject 초기화
+ </summary>
+</member>
+<member name="M:vbDrawTool.DrawObject.FillDrawObjectFields(vbDrawTool.DrawObject)">
+ <summary>
+ DrawObject 를 복사 할 때, 속성들을 복사해준다.
+ </summary>
+ <param name="drawObject"></param>
+</member>
+<member name="T:vbDrawTool.IObserver">
+ <summary>
+ IObserver 인터페이스 구독자들이 상속 받아야 하는 인터페이스
+ </summary>
+</member>
+<member name="M:vbDrawTool.IObserver.OnNext(vbDrawTool.ConEnum.ObserverAction)">
+ <summary>
+ 옵저버로부터 수신된 내용이 있다면  ObserverAction 에 따라 실행한다.
+ </summary>
+ <param name="action">Invalidate, Command, New 등</param>
+</member>
+<member name="M:vbDrawTool.IObserver.OnNext(vbDrawTool.ObserverClass)">
+ <summary>
+ 옵저버로부터 수신된 내용이 있다면 ObserverName 과 ObserverAction 에 따라 실행한다.
+ </summary>
+ <param name="obserber">ObserverClass 로 ObserverName 과 ObserverAction 을 속서으로 가진다.</param>
+</member>
+<member name="T:vbDrawTool.DrawBox">
+<summary>
+DrawObject를 그려주는 Class
+</summary>
+</member>
+<member name="F:vbDrawTool.DrawBox.properies">
+ <summary>
+ 속성 설정 폼
+ </summary>
+</member>
+<member name="F:vbDrawTool.DrawBox.resizedObject">
+ <summary>
+ 선택된 객체의 사이즈를 변경할 때 사용
+ </summary>
+</member>
+<member name="F:vbDrawTool.DrawBox.resizedObjectHandle">
+ <summary>
+ 사이즈가 변결 될 객체의 핸들 번호를 가져온다.
+ </summary>
+</member>
+<member name="F:vbDrawTool.DrawBox.startPoint">
+ <summary>
+ 마우스의 시작 위치
+ </summary>
+</member>
+<member name="F:vbDrawTool.DrawBox.lastPoint">
+ <summary>
+  마우스의 마지막 위치
+ </summary>
+</member>
+<member name="F:vbDrawTool.DrawBox.oldPoint">
+ <summary>
+ 이전의 lastPoint 를 저장한다.
+ </summary>
+</member>
+<member name="F:vbDrawTool.DrawBox.allowResize">
+ <summary>
+ DrawObject를 그릴수 있는 DrawBox 사이즈를 수정 할 수 있는지 여부를 저장하는 변수
+ </summary>
+</member>
+<member name="F:vbDrawTool.DrawBox.lastX">
+ <summary>
+ Pencil 을 그릴 때 마지막으로 그려진 Location.X 를 저장한다.
+ </summary>
+</member>
+<member name="F:vbDrawTool.DrawBox.lastY">
+ <summary>
+ Pencil 을 그릴 때 마지막으로 그려진 Location.Y 를 저장한다.
+ </summary>
+</member>
+<member name="F:vbDrawTool.DrawBox.newPencil">
+ <summary>
+  Pencil 도구로 그릴 때 사용되는 PencilObject 변수
+ </summary>
+</member>
+<member name="F:vbDrawTool.DrawBox.MinDistance">
+ <summary>
+ Pencil 도구로 그릴 때 연결 점 사이의 최소 거리를 지정하는 상수
+ </summary>
+</member>
+</members>
+</doc>

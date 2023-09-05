@@ -1,0 +1,14 @@
+C:\vsTest\vbDrawTool\vbDrawTool\bin\Debug\vbDrawTool.exe.config
+C:\vsTest\vbDrawTool\vbDrawTool\bin\Debug\vbDrawTool.exe
+C:\vsTest\vbDrawTool\vbDrawTool\bin\Debug\vbDrawTool.pdb
+C:\vsTest\vbDrawTool\vbDrawTool\bin\Debug\vbDrawTool.xml
+C:\vsTest\vbDrawTool\vbDrawTool\obj\Debug\vbDrawTool.vbproj.AssemblyReference.cache
+C:\vsTest\vbDrawTool\vbDrawTool\obj\Debug\vbDrawTool.Resources.resources
+C:\vsTest\vbDrawTool\vbDrawTool\obj\Debug\vbDrawTool.PropertiesVIew.resources
+C:\vsTest\vbDrawTool\vbDrawTool\obj\Debug\vbDrawTool.DrawBox.resources
+C:\vsTest\vbDrawTool\vbDrawTool\obj\Debug\vbDrawTool.vbproj.GenerateResource.cache
+C:\vsTest\vbDrawTool\vbDrawTool\obj\Debug\vbDrawTool.vbproj.CoreCompileInputs.cache
+C:\vsTest\vbDrawTool\vbDrawTool\obj\Debug\vbDrawTool.exe
+C:\vsTest\vbDrawTool\vbDrawTool\obj\Debug\vbDrawTool.xml
+C:\vsTest\vbDrawTool\vbDrawTool\obj\Debug\vbDrawTool.pdb
+C:\vsTest\vbDrawTool\vbDrawTool\obj\Debug\vbDrawTool.ToolBar.resources
